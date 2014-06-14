@@ -2,13 +2,11 @@
 ## that calculation for future retrieval by caching the matrix and the
 ## solution.
 
-#
-# makeCacheMatrix when called defines four functions.
-# set: prepares the generic value to be used in the makeCacheMatrix environment
-# get: gets the value previously prepared
-# setinverse: calculates the inverse
-# getinverse: gets the previously calculated inverse
-#
+## makeCacheMatrix when called defines four functions.
+## set: prepares the generic value to be used in the makeCacheMatrix environment
+## get: gets the value previously prepared
+## setinverse: calculates the inverse
+## getinverse: gets the previously calculated inverse
 makeCacheMatrix <- function(x=numeric()) {
 	m <- NULL
 	set <- function(y) {
@@ -24,10 +22,8 @@ makeCacheMatrix <- function(x=numeric()) {
 	
 }
 
-#
-# cacheSolve either calculates a matrix inverse or retrieves a previously
-# calculated inverse using the functions and environment of makeCacheMatrix
-#
+## cacheSolve either calculates a matrix inverse or retrieves a previously
+## calculated inverse using the functions and environment of makeCacheMatrix
 cacheSolve <- function(x, ...) {
 	m <- x$getinverse()
 	if(!is.null(m)) {
